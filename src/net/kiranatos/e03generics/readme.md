@@ -1,0 +1,1 @@
+ConcurrentHashMap, CopyOnWriteArrayList //потокобезопасный //in servlet-project Demo01Simple // подумать: применяется в сервлетах?

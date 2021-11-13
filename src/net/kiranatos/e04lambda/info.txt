@@ -1,0 +1,40 @@
+Просмотреть задачи по функциональному программированию в: 
+- stepik
+
+
+Mapping theory lessons to exercises:
+1.2 => 2.1 ﻿- ﻿2.6
+1.3 => 2.7 ﻿- ﻿2.14
+1.4 => 2.15 ﻿- ﻿2.19
+1.5 => 2.20 ﻿- ﻿2.24
+1.6 => 2.25 ﻿- ﻿2.29
+1.7 => 2.30 - ﻿2.31
+1.8 => 2.32 - 2.35
+1.9 => 2.36 ﻿- ﻿2.39
+
+Interesting books
+The short book with nice pictures
+    Richard Warburton. Java 8 Lambdas
+Another short book
+    Venkat Subramaniam. Functional Programming in Java: Harnessing the Power Of Java 8 Lambda Expressions
+A large book
+    Raoul-Gabriel Urma, Mario Fusco, and Alan Mycroft. Java 8 in Action
+
+Useful references Java 8 tutorial
+    https://www.tutorialspoint.com/java8/index.htm
+Series of articles on functional programming in Java 8
+    https://dzone.com/articles/whats-wrong-java-8-currying-vs
+    https://dzone.com/articles/whats-wrong-java-8-part-ii
+    https://dzone.com/articles/whats-wrong-java-8-part-iii
+    https://dzone.com/articles/whats-wrong-java-8-part-iv
+Report at the Java conference about Stream API (in russian)
+    https://www.youtube.com/watch?v=TPHMyVyktsw&index=31&list=PLVe-2wcL84b-Waky1nkWVSNHPg6eOQWU9
+List of books to learn functional programming in Java 8
+    http://www.java67.com/2015/07/5-books-learn-java-8-functional-programming.html
+Good presentation about monads in Java 8
+    https://www.slideshare.net/mariofusco/monadic-java
+Comparison and sorting ﻿with Lambdas﻿
+    http://www.baeldung.com/java-8-sort-lambda﻿
+Getting started with ﻿Java monads
+    http://mrbool.com/getting-started-with-java-monads/34302﻿
+

@@ -1,0 +1,39 @@
+1) Список всех кодировок, с которыми Java может работать. Этот метод возвращает набор пар (имя кодировки, объект описывающий кодировку)
+SortedMap<String,Charset> charsets = Charset.availableCharsets();
+
+2) Текущая активная кодировка (Unicode).
+Charset currentCharset = Charset.defaultCharset();
+
+3) Преобразовать строку в определенную кодировку.
+String s = "Good news everyone!";
+Charset koi8 = Charset.forName("KOI8-R");
+byte[] buffer = s.getBytes(koi8);
+
+String s = "Good news everyone!";
+byte[] buffer = s.getBytes("Windows-1251")
+
+4) Преобразовать набор байт из файла в строку, если известно в какой кодировке они были в файле.
+//String(byte bytes[])
+byte[] buffer = new byte[1000];
+inputStream.read(buffer);
+String s = new String(buffer);
+
+//String(byte bytes[], Charset charset)
+byte[] buffer = new byte[1000];
+inputStream.read(buffer);
+Charset koi8 = Charset.forName("KOI8-R");
+String s = new String(buffer, koi8);
+
+//String(byte bytes[], String charsetName)
+byte[] buffer = new byte[1000];
+inputStream.read(buffer);
+String s = new String(buffer, "Windows-1251");
+
+5) Преобразовать набор байт из одной кодировки в другую
+Charset koi8 = Charset.forName("KOI8-R");
+Charset windows1251 = Charset.forName("Windows-1251");
+byte[] buffer = new byte[1000];
+inputStream.read(buffer);
+String s = new String(buffer, koi8);
+buffer = s.getBytes(windows1251);
+outputStream.write(buffer);
