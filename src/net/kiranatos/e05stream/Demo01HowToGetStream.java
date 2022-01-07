@@ -141,11 +141,13 @@ public class Demo01HowToGetStream {
         Stream<Integer> intStreamBuild = streamBuider.add(9).add(10).build();
         intStreamBuild.forEach(System.out::print);       
                 
+        /****** .splitAsStream() ***********************************************/
         System.out.printf("\n\n %d) .splitAsStream() Creates a stream from the given input sequence around matches of this pattern"
                 + "\n Example: ", paragraph++);
         streamString_04 = Pattern.compile("[0-9]").splitAsStream("word5ttt5dome4_4kisa wagag-Ga9fofo");
         streamString_04.limit(LIMIT).forEach(MyHelpClass::showElement);
         
+        /****** RANDOM ***********************************************/
         System.out.printf("\n\n %d) Streams & Randoms."
                 + "\n Example: ", paragraph++);
         DoubleStream s = new SplittableRandom().doubles();

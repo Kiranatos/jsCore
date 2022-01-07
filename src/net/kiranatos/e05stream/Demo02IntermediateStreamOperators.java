@@ -134,10 +134,10 @@ flatMapToLong​(Function mapper)
         list.stream().sorted((o1,o2)-> o2.compareTo(o1)).collect(Collectors.toList()).forEach(System.out::print);
 
         System.out.print("\n Example 7 with Comparator.comparingInt(): \n");
-        User.listUsers.stream().sorted(Comparator.comparingInt(User::getAge)).collect(Collectors.toList()).forEach(System.out::println);
+        User.getListUsers(true).stream().sorted(Comparator.comparingInt(User::getAge)).collect(Collectors.toList()).forEach(System.out::println);
         
         System.out.print(" Example 8: ");
-        User.listUsers.stream().sorted((o1, o2) -> o1.getAge() - o2.getAge()).collect(Collectors.toList()).forEach(System.out::print);
+        User.getListUsers(true).stream().sorted((o1, o2) -> o1.getAge() - o2.getAge()).collect(Collectors.toList()).forEach(System.out::print);
 			
         
         

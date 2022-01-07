@@ -64,12 +64,7 @@ class User {
     private String name;
     private int age;
     
-    static List<User> listUsers = Arrays.asList(
-            new User("C", 30),
-            new User("D", 40),
-            new User("A", 10),
-            new User("B", 20),
-            new User("E", 50));
+    private static List<User> listUsers;
     
     public User(String name, int age) {
         this.name = name;
@@ -79,10 +74,40 @@ class User {
     public String getName()             { return name; }
     public void setName(String name)    { this.name = name; }
     public int getAge()                 { return age; }
-    public void setAge(int age)         { this.age = age; }
+    public User setAge(int age)         { this.age = age; return this; }
+    
+    public static List<User> getListUsers(boolean refresh) {
+        if (refresh || listUsers.isEmpty()) {
+            listUsers = Arrays.asList(
+            new User("C", 30),
+            new User("D", 40),
+            new User("A", 10),
+            new User("B", 20),
+            new User("E", 50));
+        }
+        return listUsers; 
+    }
     
     @Override
     public String toString() {
         return "User{name=" + name + ", age=" + age +'}';
+    }    
+}
+
+class Phone {
+    private String name;
+    private int price;
+    private String number;
+   
+    public Phone(String name, int price) {
+        this.name = name;
+        this.price = price;
     }
+
+    public String getName()                 { return name; }
+    public int getPrice()                   { return price; }
+    public String getNumber()               { return number; }
+    public void setName(String name)        { this.name = name; }
+    public void setPrice(int price)         { this.price = price; }
+    public void setNumber(String number)    { this.number = number; }    
 }

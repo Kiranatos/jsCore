@@ -1,8 +1,5 @@
 package net.kiranatos.e03generics;
 
-/**
- * Source: developed by my own knowledge
- */
 
 import java.util.*;
 
