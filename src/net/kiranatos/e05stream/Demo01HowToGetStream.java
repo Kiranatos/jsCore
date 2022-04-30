@@ -155,6 +155,14 @@ public class Demo01HowToGetStream {
         System.out.print("\n Example .ints(кол-во эл., начало inclusive, конец exclusive: ");
         new Random().ints(10, 1, 7).forEach(n -> System.out.print(n + " "));
         System.out.print("\n Example: ");
-        new SplittableRandom().ints(10, -1, 9).forEach(n -> System.out.print(n + " "));        
+        new SplittableRandom().ints(10, -1, 9).forEach(n -> System.out.print(n + " "));
+        
+        /****** .boxed() from another streams**********************************/
+        System.out.printf("\n\n %d) .boxed() позволяет конвертировать из IntStream, LongStream, DoubleStream в Stream<T>."
+                + "\n Example: ", paragraph++);        
+        IntStream intStream = IntStream.of(2,5,6,5,8,1,9,2,2);
+        System.out.println("\t IntStream -> Stream<Integer>");
+        Stream<Integer> streamInteger = intStream.boxed();        
+        streamInteger.forEach(System.out::print);
     }    
 }

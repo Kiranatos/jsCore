@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 public class Demo03TerminalOperators {
     private static int n = 1;
     public static void main(String[] args) {
-        IntStream stream = IntStream.of(2,5,6,5,8,1,9,2,2);        
+        IntStream stream = IntStream.of(2,5,6,5,8,1,9,2,2);
         System.out.println("\n\t << III. TERMINAL OPERATORS OF STREAMS >> \n" +
                 " Oбрабатывают элементы, запускают и завершают работу стрима, Тerm.Оperat. в цепочке может быть только один!");
         

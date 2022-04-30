@@ -7,7 +7,9 @@ import java.util.List;
 
 public class Test {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
+        int i = 0;
+        while(i++ > 10) { }
         
         String str1 = "one";
         String str2 = new String("one");
@@ -21,9 +23,7 @@ public class Test {
         new Test().method(r[0]);
         
         System.out.println(r[0]);
-
-
-        }
+    }
     
     public void method(int a) {
         a = 10;
