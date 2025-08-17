@@ -1,5 +1,7 @@
 package net.kiranatos.e01core;
 
+import java.util.Objects;
+
 /* Информация о классe Object 
 Clone:
 https://metanit.com/java/tutorial/3.13.php
@@ -55,6 +57,7 @@ class Item implements Cloneable{
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + year;
         return result;
+        // return Objects.hash(str, a, b);
     }
 
     /* Нужно:

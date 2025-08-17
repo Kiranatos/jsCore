@@ -1,25 +1,6 @@
-ConcurrentHashMap, 
-CopyOnWriteArrayList //потокобезопасный //
-in servlet-project Demo01Simple // 
-подумать: применяется в сервлетах?
+package net.kiranatos.e03generics;
 
-    ArrayList.Iterator removes the element from the collection and shifts 
-subsequent data to the left whereas, LinkedList.Iterator simply adjusts the pointer 
-to the next element. As such, LinkedList.Iterator performs much 
-better than ArrayList.Iterator when removing items
-
-new ConcurrentLinkedQueue<Integer>();  
-
-https://www.baeldung.com/java-generics
-https://www.digitalocean.com/community/tutorials/java-generics-example-method-class-interface
-
-
-
-
-
-
-
-
+import java.util.ArrayList;
 
 class B1<T> {
     public <T> void print(T ob) {
@@ -42,7 +23,21 @@ class B3<N> {
     }
 }
 
-class A {
+class B4<T> {
+    public <T> void print(Object ob) {
+        T t = (T) ob;
+        System.out.println(t + " : " + t.getClass().getSimpleName());        
+    }
+}
+
+class B5<T> {
+    public void print(Object ob) {
+        T t = (T) ob;
+        System.out.println(t + " : " + t.getClass().getSimpleName());        
+    }
+}
+
+class Example {
     public static void main(String[] args) {
         B1<Integer> b1 = new B1<>();
         b1.print("text");
@@ -58,6 +53,16 @@ class A {
         b3.print("text");
         b3.print(20);
         b3.print(true);
+        
+        B4<Integer> b4 = new B4<>();
+        b4.<Boolean>print("text");
+        b4.print(20);
+        b4.<Boolean>print(true);
+        
+        B5<Integer> b5 = new B5<>();
+        b5.<Boolean>print("text");
+        b5.print(20);
+        b5.<Boolean>print(true);
         
         ArrayList<String> list = new ArrayList<>();
         list.add("Java");

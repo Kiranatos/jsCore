@@ -7,7 +7,7 @@ Inheritance, bit operations, Enum
 Sortings: Bubble Sort, Quick Sort
 task: убрать StartSorts
  
-3) e03gene
+3) e03generics
 Arrays, Generics, ArrayList, HashMap, HashSet
 
 4) e04lamb
